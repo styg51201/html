@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+        @keyframes ani1 {
+            from {
+                background: lightskyblue;
+            }
+
+            to {
+                background: pink;
+                width: 300px;
+                /* height: 400px; */
+            }
+        }
+
+        @keyframes ani2 {
+            0% {
+                background: lightskyblue;
+            }
+
+            50% {
+                background: pink;
+                width: 300px;
+
+            }
+
+            100% {
+                background: red;
+            }
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightskyblue;
+            transition: 1s;
+            margin: 10px;
+
+        }
+
+        .ani1 {
+            animation: ani1 2s;
+        }
+
+        .ani2 {
+            animation: ani2 2s;
+            animation-iteration-count: infinite;
+            /* infinite無限播放 */
+        }
+
+        .ani3 {
+            animation: ani2 2s;
+            animation-direction: reverse;
+        }
+
+        .ani4 {
+            animation: ani1 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box ani1"></div>
+    <div class="box ani2"></div>
+    <div class="box ani3"></div>
+    <div class="box ani4"></div>
+    <div class="box animated infinite jello"></div>
+
+</body>
+
+</html>

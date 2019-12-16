@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+    <style>
+    td,th{
+        border:1px solid gray;
+        padding: 5px;
+    }
+    table{
+        border-collapse:collapse;
+        width:100%;
+        
+    }
+    thead tr{
+        background: #eee;
+    }
+    tbody tr:nth-child(2n+1){
+        background:rgb(110, 135, 202)
+    }
+    tfoot{
+        background: gold;
+    }
+    .box{
+        background:lightseagreen;
+        padding: 10px;
+        margin-top: 15px;
+        /* margin-bottom: 15px; */
+        border:solid 10px red ;
+        width: 300px;
+
+    }
+    
+    </style>
+</head>
+<body>
+<div>
+    <table>
+     <caption>通訊錄</caption>
+     <thead>
+     <tr>
+         <th>姓名</th>
+         <th>電話</th>
+         <th>EMAIL</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+         <td>王</td>
+         <td>091</td>
+         <td>@</td>
+     </tr>
+     <tr>
+         <td>林</td>
+         <td>092</td>
+         <td>@</td>
+     </tr>
+     <tr>
+        <td>林</td>
+        <td>092</td>
+        <td>@</td>
+    </tr>
+    <tfoot>
+    <tr>
+        <td colspan='3'>203班</td>
+    </tr>
+    </tfoot>
+    </tbody>
+ </table>  
+ </div>
+ <div class="box">
+     box
+ </div>
+ <span class='sp'>123</span>
+</body>
+</html>

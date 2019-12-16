@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object-fit</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000000;
+        margin: 10px;
+        float: left;
+        overflow: hidden;
+    }
+    /* 圖片的寬高要設定 */
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .fill{
+        object-fit: fill;
+    }
+    .contain{
+        object-fit: contain;
+    }
+    .over{
+        object-fit: cover;
+    }
+    .none{
+        object-fit: none;
+    }
+    /* 設定圖片位置 */
+    .post{
+        object-fit: none;
+        object-position: top center;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img class="fill" src="../images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+            <img class="contain" src="../images/dr_strange.jpg" alt="">
+        </div>
+        <div class="box">
+                <img class="over" src="../images/dr_strange.jpg" alt="">
+            </div>
+            <div class="box">
+                    <img class="none" src="../images/dr_strange.jpg" alt="">
+                </div>
+                <div class="box">
+                        <img class="post" src="../images/dr_strange.jpg" alt="">
+                    </div>
+</body>
+</html>

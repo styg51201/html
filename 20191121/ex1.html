@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex1</title>
+    <style>
+        body
+        {
+            background: #eeeeee;
+        }
+        .card{
+            width: 400px;
+            background: #ffffff;
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 8%;
+            box-shadow: 1px 1px 10px #333333;
+            overflow: hidden;
+        }
+    figure{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: -100px;
+        position: absolute;
+        left:50%;
+        top:25%;
+    }
+    figure img{
+        width: 100%;
+    }
+    h3{
+        border-bottom:1px solid #333333 ;
+        padding:20px 20px 10px  ;
+        width: 50%;
+        margin: 0 auto;
+        }
+    .img{
+        background: url(../images/light.jpg);
+        height: 240px;
+    }
+    .art{
+        border: 20px solid transparent;
+        border-image:url(../images/border-image2.png) 20 round;
+        padding: 90px 20px 20px;
+        min-height: 100px;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="img"></div>
+            <figure><img src="../images/dr_strange.jpg" alt=""></figure>
+        <div class="art">
+            <h3>Dr. abcde</h3>
+            <p>Hello World,I'm Dr.abcde.</p>
+        </div>
+    </div>
+</body>
+</html>

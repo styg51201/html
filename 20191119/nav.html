@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav</title>
+    <style>
+        body{
+            background: #ddd;
+            
+        }
+        .wrapper{
+            background-color: #fff;
+            width: 600px;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;
+            /* padding-left: 13px; */
+      
+        }
+    ul li{
+        float: left;
+        width: 50
+        font-family: serif;
+       
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+        display: block;
+        /* padding: 8px 10px; */
+        /* line-height: 30px; */
+
+    }
+    a:hover{
+        background: lightseagreen;
+
+    }
+    .clearfix::after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Store</a></li>
+                <li><a href="">Contact</a></li>
+                
+            </ul>
+         
+        </nav>
+    </div>
+</body>
+</html>

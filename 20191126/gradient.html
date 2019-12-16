@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .box{
+        height: 200px;
+        margin: 30px 0;
+     }   
+    .color1{
+        background: linear-gradient(red,blue);
+    }
+    .color2{
+        background: linear-gradient(to left,red,blue);
+    }
+    .color3{
+        background: linear-gradient(170deg,red,blue,green);
+    }
+    /* 下面半透明效果 */
+    .color4{
+        background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8));
+    }
+    .color5{
+        background: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.8)) no-repeat bottom ,url(../images/map.png) center center; 
+        background-size:auto 40px , cover
+    }
+    /* 50%的位置是橘色,70%的位置是綠色 */
+    .color6{
+        background: linear-gradient(to right, red, orange 50%, yellow , green 70%, blue, purple);
+    }
+    /* 10%接10% 就沒有漸層 */
+    .color7{
+        background: linear-gradient(to right, red 10%, orange 10%, yellow , green, blue, purple);
+    }
+    /* 會重複 */
+    .color8{
+        background: repeating-linear-gradient(to left, deeppink, blue 20%);
+    }
+    /* 加circle,中間是圓的 */
+    .color9{
+        background: radial-gradient(circle, red, yellow );
+    }
+    /* at 在X軸的75px 及 y軸的75% 位置,放射漸層 就是圓心的位置 */
+    .color10{
+        background: radial-gradient(at 100px 75%, red, yellow );
+    }
+     /* 加circle,變圓的 */
+    .color11{
+        background: radial-gradient(circle at 100px 75%, red, yellow );
+    }
+    /* 最後一個不要超過100% */
+    .color12{
+        background: repeating-radial-gradient(circle,red 10%,yellow 30%);
+    }
+    .color13
+    {
+        background: linear-gradient(rgba(8, 219, 149, 0.829),rgba(255, 208, 0, 0.774));
+        background-clip:text ;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    </style>
+</head>
+<body>
+    <div class="box color1"></div>
+    <div class="box color2"></div>
+    <div class="box color3"></div>
+    <div class="box color4"></div>
+    <div class="box color5"></div>
+    <div class="box color6"></div>
+    <div class="box color7"></div>
+    <div class="box color8"></div>
+    <div class="box color9"></div>
+    <div class="box color10"></div>
+    <div class="box color11"></div>
+    <div class="box color12"></div>
+    <div class="color13">
+        <h1>Hello World!!</h1>
+    </div>
+
+</body>
+</html>

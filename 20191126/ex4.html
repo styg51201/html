@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex4</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        body
+        {
+            background: #eeeeee;
+        }
+        .card{
+            width: 400px;
+            background: #ffffff;
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 3%;
+            box-shadow: 1px 1px 10px #333333;
+            overflow: hidden;
+            font-family: 'Indie Flower', cursive;
+            font-size: 15px;
+        }
+    figure{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: -100px;
+        position: absolute;
+        left:50%;
+        top:25%;
+    }
+    figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+    h3{
+        border-bottom:1px solid #333333 ;
+        padding:20px 20px 10px  ;
+        margin: 0 auto;
+        }
+    .img{
+        background: url(../images/light.jpg);
+        height: 240px;
+    }
+    .art{
+        border: 20px solid transparent;
+        border-image:url(../images/border-image2.png) 20 round;
+        padding: 90px 20px 20px;
+        min-height: 100px;
+        
+    }
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        display: block;
+        background: rgb(16, 207, 198);
+        padding: 15px;
+        border-radius: 10px;
+        transition: .5s;
+        text-shadow: 0 -1px 0 #000000;
+    }
+    a:hover{
+        font-weight: bolder;
+        color: rgb(37, 14, 241);
+        text-shadow: none;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="img"></div>
+            <figure><img src="../images/dr_strange.jpg" alt=""></figure>
+        <div class="art">
+            <h3>Dr. abcde</h3>
+            <p>Hello World,I'm Dr.abcde.</p>
+            <a href="#" role="button">Follow Me</a>
+        </div>
+    </div>
+</body>
+</html>

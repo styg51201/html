@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D</title>
+    <style>
+        img {
+            width: 250px;
+            transition: .5s;
+        }
+
+        /* 會再欲變形的物體外包住一層,再把perspective寫進去,這樣3D變形的中心,就會在物體的中心了 */
+        figure {
+            padding: 0;
+            margin: 20px;
+            float: left;
+            perspective: 500px;
+        }
+
+        .translate {
+            transform-origin: bottom;
+        }
+
+        .translate:hover {
+            transform: translateZ(20px);
+        }
+
+        .rotate {
+            transform-origin: bottom;
+        }
+
+        .rotate:hover {
+            transform: rotateX(-30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="camrea">
+        <figure>
+            <img class="translate" src="../images/dr_strange.jpg" alt="">
+        </figure>
+        <figure>
+            <img class="rotate" src="../images/dr_strange.jpg" alt="">
+        </figure>
+    </div>
+</body>
+
+</html>

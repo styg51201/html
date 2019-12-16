@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earth</title>
+    <style>
+        @keyframes earth {
+            0% {
+                transform: rotate(0deg) translateX(250px);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(250px);
+            }
+
+        }
+
+        @keyframes moon {
+            from {
+                transform: rotate(0deg) translateX(80px);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(80px);
+            }
+        }
+
+        body {
+            background: url(../images/space-bg.jpg);
+        }
+
+        .space {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ffffff;
+            margin: 100px auto;
+            border-radius: 50%;
+        }
+
+        img {}
+
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -64px 0 0 -64px;
+        }
+
+        .air {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -81px 0 0 -81px;
+            animation: earth 9s infinite;
+            animation-timing-function: linear;
+        }
+
+        .earth {
+            padding: 44px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+        }
+
+        .space_moon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -24px 0 0 -24px;
+            animation: moon 4s infinite;
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space">
+        <img class="sun" src="../images/sun.png" alt="">
+        <div class="air">
+            <img class="earth" src="../images/earth.png" alt="">
+            <div class="space_moon">
+                <img class="moon" src="../images/moon.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transform</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background: rgb(117, 117, 189);
+        transition: .5s;
+        float: left;
+    }
+    .translateX:hover{
+        transform: translateX(50px);
+    }
+    .translateY:hover{
+        transform: translateY(-50px);
+    }
+    .translate:hover{
+        transform: translate(50px,-20px);
+    }
+    .rotate:hover{
+        transform: rotate(277deg);
+    }
+    .scale:hover{
+        transform: scale(0.3);
+    }
+    /* 讓感應區塊固定 才不會卡卡 */
+    .wrapper{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        float: left;
+    }
+    .wrapper .box {
+        margin: 0;
+    }
+    .wrapper:hover .box{
+        transform: scale(0.3);
+    }
+    .wrapper .box2{
+        transform: scale(0);
+    }
+    .wrapper:hover .box2{
+        transform: scale(1);
+    }
+    nav{
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: darkgrey;
+        transition: .5s linear ease;
+    }
+    .home{
+        text-align: center;
+        padding-top:50px ;
+        
+    }
+    nav:hover {
+        transform: skew(-30deg);
+    }
+    nav:hover .home{
+        /* transform: skew(30deg); */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box translateX">translateX</div>
+    <div class="box translateY">translateY</div>
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+
+    <div class="wrapper">
+        <div class="box box2"></div>
+    </div>
+
+    <nav>
+        <div class="home">home</div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+    <style>
+        img {
+            width: 200px;
+            transition: .5s;
+        }
+
+        .blur:hover {
+            filter: blur(3px);
+        }
+
+        .brightness:hover {
+            filter: brightness(150%);
+        }
+
+        .contrast:hover {
+            filter: contrast(200%)
+        }
+
+        .grayscle:hover {
+            filter: grayscale(100%);
+        }
+
+        .saturate:hover {
+            filter: saturate(200%);
+        }
+
+        .drop-shadow:hover {
+            filter: drop-shadow(0 10px 5px #000000);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="blur" src="../images/dr_strange.jpg" alt="">
+    <img class="brightness" src="../images/dr_strange.jpg" alt="">
+    <img class="contrast" src="../images/dr_strange.jpg" alt="">
+    <img class="grayscle" src="../images/dr_strange.jpg" alt="">
+    <img class="saturate" src="../images/dr_strange.jpg" alt="">
+    <img class="drop-shadow" src="../images/icon_follow.png" alt="">
+
+</body>
+
+</html>

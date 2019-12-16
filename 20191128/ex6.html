@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex6</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome-free-5.11.2-web/css/all.min.css">
+    <style>
+        body {
+            background: #eeeeee;
+        }
+
+        .card {
+            width: 400px;
+            background: #ffffff;
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 3%;
+            box-shadow: 0px 0px 10px #333333;
+            overflow: hidden;
+            font-family: 'Indie Flower', cursive;
+            font-size: 20px;
+            transition: .5s;
+        }
+
+        .card:hover {
+            transform: translateY(10px);
+            box-shadow: 0px -5px 10px #333333
+        }
+
+        .card:hover h3 {
+            letter-spacing: 3px;
+            text-indent: 3px;
+        }
+
+        /* 下面注意置中的方法 */
+        .fas {
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: .5s;
+        }
+
+        figure {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: -100px;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            background: url(../images/dr_strange.jpg);
+            background-size: cover;
+            background: #000000;
+        }
+
+        .head {
+            transition: .5s;
+        }
+
+        figure:hover .fas {
+            opacity: 1;
+        }
+
+        figure:hover .head {
+            opacity: .5;
+        }
+
+        figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: .5s;
+        }
+
+        h3 {
+            border-bottom: 1px solid #333333;
+            padding: 20px 20px 20px;
+            margin: 0 auto;
+            transition: .5s;
+        }
+
+        .img {
+            background: url(../images/light.jpg);
+            height: 180px;
+        }
+
+        .art {
+            border: 20px solid transparent;
+            border-image: url(../images/border-image2.png) 20 round;
+            padding: 80px 20px 20px;
+            min-height: 100px;
+
+        }
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: block;
+            background: linear-gradient(to bottom, rgb(30, 130, 223) 50%, rgb(30, 184, 223));
+            padding: 15px;
+            border-radius: 10px;
+            transition: .5s;
+            text-shadow: 0 -1px 0 #000000;
+        }
+
+        p {
+            text-indent: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="img"></div>
+        <figure>
+            <i class="fas fa-portrait blo"></i>
+            <img class="head" src="../images/dr_strange.jpg" alt="">
+        </figure>
+        <div class="art">
+            <h3>Dr. Stacey</h3>
+            <p>Hello World , I'm Dr.Stacey .</p>
+            <a href="#" role="button" class="btn">Follow Me</a>
+        </div>
+    </div>
+</body>
+
+</html>

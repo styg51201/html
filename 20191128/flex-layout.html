@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <style>
+        body {
+            background: #dddddd;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3c5a9c;
+        }
+
+        a:hover {
+            color: #244386;
+        }
+
+        header {
+            background: #ffffff;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 避免圖片爆版 */
+        .wrapper img {
+            /* max-width: 100%; */
+        }
+
+        header .wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            /* height: 50px; */
+            width: 200px;
+        }
+
+        .mainmenu {
+            background: #3c5a9c;
+        }
+
+        .mainmenu ul {
+            display: flex;
+
+        }
+
+        /* a 原本用padding是撐不開,要換成block */
+        .mainmenu a {
+            color: #ffffff;
+            display: block;
+            padding: 15px;
+            text-align: center;
+
+        }
+
+        .mainmenu a:hover {
+            background: #244386;
+        }
+
+        .mainmenu li.current {
+            background: #244386;
+        }
+
+        @media screen and (max-width: 576px) {
+            .mainmenu li {
+                flex-grow: 1;
+                flex-basis: 0px;
+            }
+
+            .mainmenu a {
+                padding: 15px 0;
+            }
+        }
+
+        .main-contect {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width:576px) {
+            .main-contect {
+                flex-direction: column;
+            }
+        }
+
+        .left-aside {
+            max-width: 18%;
+            margin: 10px 20px 10px 0px;
+        }
+
+        @media screen and (max-width:576px) {
+            .left-aside {
+                max-width: 100%;
+                margin: 10px 0px 10px;
+            }
+        }
+
+        figure {
+            width: 100%;
+            margin: 0 0 10px 0px;
+            border-radius: 15px;
+            overflow: hidden;
+            max-height: 500px;
+            background: #ffffff;
+
+        }
+
+        .pic {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        /* 邊框先用透明的 */
+        .left-aside a {
+            color: black;
+            display: block;
+            padding: 10px;
+            border-left: 4px solid transparent;
+        }
+
+        /* hover過再加顏色,不燃文字會被擠壓的感覺 */
+        .left-aside a:hover,
+        .left-aside li.current a {
+            background: #ffffff;
+            border-color: #244386;
+            font-weight: 4px solid bolder;
+        }
+
+        @media screen and (max-width:576px) {
+            .left-aside ul {
+                display: flex;
+            }
+
+            .left-aside li {
+                flex-grow: 1;
+                flex-basis: 0px;
+                text-align: center;
+            }
+
+            .left-aside a {
+                border-left: none;
+                border-bottom: 4px solid transparent;
+            }
+        }
+
+        main {
+            background: #ffffff;
+            flex-grow: 1;
+            border-radius: 15px;
+            margin-top: 10px;
+            padding: 15px;
+            min-height: 500px;
+
+        }
+
+        .right-aside {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        footer {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* @media screen and (max-width: 768px) {
+            .mainmenu ul {
+                justify-content: center;
+            }
+
+            .wrapper li {
+                flex-grow: 1;
+            }
+
+            .main-contect {
+                flex-direction: column;
+            }
+
+            .left-aside {
+                max-width: 100%;
+                margin: 10px 0px 0px 0px;
+            }
+
+            .left-aside ul {
+                display: flex;
+            }
+
+            .home {
+                border: none;
+                border-bottom: 4px solid #244386;
+            }
+
+            .left-aside a:hover {
+                border: none;
+                border-bottom: 4px solid #244386;
+            }
+
+            main {
+                margin: 0;
+                min-height: 500px;
+            }
+
+        } */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+            <img class="logo" src="../images/facebook.png" alt="">
+            <div class="">
+                <a href="#">Log in</a> | <a href="#">Sign up</a>
+            </div>
+        </div>
+    </header>
+    <nav class="mainmenu">
+        <ul class="wrapper">
+            <li class="current"><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">STORY</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper main-contect">
+        <aside class="left-aside">
+            <figure><img class="pic" src="../images/logo.jpg" alt=""></figure>
+            <nav class="asidemenu">
+                <ul>
+                    <li class="current"><a href="#">首頁</a></li>
+                    <li><a href="#">關於</a></li>
+                    <li><a href="#">相簿</a></li>
+                    <li><a href="#">影片</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <h3>Uniform Map</h3>
+            <p>2017/5/5 14:00:00</p>
+            <p>Just Uniform Map</p>
+        </main>
+        <aside class="right-aside">
+            <img src="../images/jk.png" alt="">
+        </aside>
+    </div>
+    <footer class="wrapper">
+        <p>copyright by facebook</p>
+    </footer>
+
+</body>
+
+</html>

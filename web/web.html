@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+        }
+
+        .wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 10px;
+            position: relative;
+
+        }
+
+        nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav li:hover a {
+            background: rgb(245, 184, 210);
+        }
+
+        .mainNav,
+        .secNav {
+            display: flex;
+        }
+
+
+        nav a {
+            display: block;
+            height: 100%;
+            font-size: 25px;
+            padding: 20px 15px;
+            border-radius: 10px;
+        }
+
+        .setting {
+            background: url(pics_1129/setting.png);
+            width: 60px;
+            height: 80px;
+        }
+
+        .setting img {
+            display: none;
+        }
+
+        .setting:hover {
+            background: url(pics_1129/setting_h.png);
+        }
+
+        .mobile {
+            margin: 0;
+            padding: 0;
+            display: none;
+            align-self: stretch;
+
+        }
+
+
+
+        .mobile .mobileNav {
+            width: 40px;
+            padding-top: 30px;
+
+        }
+
+        .mobileNav:hover {
+            /* background: #dddddd; */
+        }
+
+        .choose {
+            width: 100%;
+            max-height: 0px;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+            transition: .5s;
+
+        }
+
+        .choose li {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        .choose a:hover {
+            background: rgb(245, 184, 210);
+        }
+
+        .choose a {
+            font-size: 20px;
+            height: 63px;
+            display: block;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .choose .mobileSetting {
+            padding: 0;
+        }
+
+        .mobileSetting img {
+            width: 80px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chooseFirst,
+        .chooseSec {
+            width: 100%;
+            display: flex;
+        }
+
+        .mobile:hover .choose {
+            max-height: 126px;
+        }
+
+        @media screen and (max-width: 576px) {
+            header {
+                justify-content: space-between;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .mainLogo img {
+                width: 50%;
+            }
+
+            .setting {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .choose {
+                top: 74px;
+            }
+        }
+
+        main {
+            background: url(images/1_1280-1.jpg) no-repeat;
+            background-size: cover;
+            background-position: top center;
+            min-height: 450px;
+            padding: 0;
+            position: relative;
+        }
+
+        .bk {
+            margin: 0;
+            padding: 0;
+            background: black;
+            width: 100%;
+            min-height: 450px;
+            opacity: .3;
+        }
+
+        .con1 {
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            color: white;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+
+        .logoIcon {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background: white;
+            -webkit-mask: url(images/logo_icon_g.svg);
+            -webkit-mask-size: 100% 100%;
+
+        }
+
+        .search {
+            min-width: 60%;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid rgb(235, 76, 110);
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .search img {
+            height: 20px;
+        }
+
+        .selectBox {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .search input {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            border-left: 1px solid rgb(235, 76, 110);
+            padding-left: 10px;
+            margin: 0 5px;
+        }
+
+        .search input::placeholder {
+            color: white;
+        }
+
+        .search select {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .search option {
+            color: black;
+        }
+
+        .search .button {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: rgb(245, 93, 144);
+            padding: 3px;
+        }
+
+        .button:hover {
+            font-weight: bolder;
+        }
+
+        .sec_bg {
+            background: #000;
+
+        }
+
+        .sec {
+            display: flex;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .sec>a {
+            color: white;
+            border-radius: 5px;
+        }
+
+        .sec>a:hover {
+            background: rgba(255, 255, 255, 0.233);
+        }
+
+        .sec p {
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 576px) {
+            main {
+                background-position: center center;
+            }
+
+            .sec {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .sec div {
+                margin: 8px;
+            }
+
+            .con1 {
+                width: 100%;
+            }
+        }
+
+        article {
+            padding: 20px 30px;
+        }
+
+        article p {
+            text-align: right;
+        }
+
+        article a {
+            background: rgb(231, 92, 92);
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .title {
+            margin: 20px 0;
+        }
+
+        .title h2 {
+            font-size: 30px;
+            text-align: center;
+            margin: 5px;
+
+        }
+
+        .borderLine {
+            width: 35px;
+            border-top: 3px solid #000000;
+            margin: 0 auto;
+        }
+
+        article a:hover {
+            font-weight: bolder;
+            background: rgb(255, 127, 197);
+        }
+
+        .sec4 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        .sec4>li {
+            width: 300px;
+            height: 400px;
+            margin: 0 2px;
+            position: relative;
+
+        }
+
+        .sec4 li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .sec4 span {
+            position: absolute;
+            bottom: 20px;
+            right: -15px;
+            padding: 5px 30px;
+            border: 1px solid thistle;
+            background: rgba(255, 255, 255, 0.527);
+            color: rgb(216, 62, 134);
+        }
+
+        @media screen and (max-width:576px) {
+            article {
+                padding: 10px;
+            }
+
+            article a {
+                font-size: 15px;
+                margin: 0;
+            }
+
+            .sec4 {
+                flex-wrap: wrap;
+            }
+
+            .sec4 li {
+                width: 48%;
+                height: 300px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .sec5 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sec5 li {
+            width: 30%;
+            height: 300px;
+            background: black;
+            position: relative;
+        }
+
+        .sec5 li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .7;
+        }
+
+        .sec5 p {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            text-align: center;
+            transform: translate(0%, -50%);
+            color: white;
+            font-size: 20px;
+        }
+
+        @media screen and (max-width:576px) {
+            .sec5 {
+                flex-direction: column;
+            }
+
+            .sec5 li {
+                height: 200px;
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+        .app {
+            background: #dddddd;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone {
+            height: 230px;
+            margin-right: 50px;
+        }
+
+        .app p {
+            color: rgb(224, 28, 149);
+        }
+
+        .appStore {
+            background: url(pics_1129/btn_app_ios.png);
+            display: block;
+            width: 135px;
+            height: 40px;
+        }
+
+        .googlePlay {
+            background: url(pics_1129/btn_app_android.png);
+            display: block;
+            width: 135px;
+            height: 40px;
+        }
+
+        .appStore>img,
+        .googlePlay>img {
+            display: none;
+        }
+
+        .appStore:hover img,
+        .googlePlay:hover img {
+            display: inline;
+        }
+
+        @media screen and (max-width:576px) {
+            .app_contect>p {
+                display: none;
+            }
+
+            .app_store {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .phone {
+                margin: 0;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .dsign {
+                flex-direction: column;
+            }
+
+            .more>span {
+                display: block;
+                margin: 10px 0 30px 0;
+            }
+        }
+
+        .hire {
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            color: rgb(0, 0, 0);
+        }
+
+        .hire .blur {
+            background: url(images/slide1.jpg) center center;
+            background-size: cover;
+            position: absolute;
+            opacity: .8;
+            filter: blur(3px);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+        }
+
+        .dsign {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .p_635 {
+            margin: 0px 80px;
+        }
+
+        .line {
+            width: 1px;
+            height: 150px;
+            ;
+            border-left: 5px dashed rgb(54, 48, 48);
+        }
+
+        .p_first+p {
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .more {
+            text-align: center;
+        }
+
+        .more>span {
+            font-size: 30px;
+        }
+
+        .more a {
+            background: rgba(255, 255, 255, 0.534);
+            padding: 5px 30px;
+            margin: 10px 20px;
+        }
+
+        .more>a:hover {
+            box-shadow: 1px 1px 5px #000;
+            font-weight: bolder;
+        }
+
+        .imfo {
+            background: #dddddd;
+            display: flex;
+            padding: 0px 5px;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+
+        @media screen and (max-width:576px) {
+            .imfo {
+                flex-direction: column;
+            }
+
+            .imfo .logo_imfo {
+                width: 100%;
+
+            }
+
+            .icon {
+                width: 100%;
+            }
+
+            .contact,
+            .ios {
+                width: 50%;
+                padding-left: 10px;
+            }
+
+            .footer span {
+                display: block;
+            }
+
+        }
+
+        .logo_imfo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .logo_imfo img {
+            width: 50px;
+        }
+
+        .icon {
+            display: flex;
+            margin: 10px;
+        }
+
+        .miniIcon {
+            display: flex;
+            align-items: center;
+        }
+
+        .miniIcon:hover {
+            border: 1px solid #000000;
+            border-radius: 7px;
+        }
+
+        .icon span {
+            margin: 0 10px 0 5px;
+        }
+
+        .contact img,
+        .ios img {
+            width: 30px;
+        }
+
+        .join {
+            position: relative;
+            background: url(pics_1129/btn_join.png) no-repeat;
+            width: 135px;
+            height: 40px;
+        }
+
+        .join_pic {
+            display: none;
+        }
+
+        .join:hover .join_pic {
+            display: inline;
+        }
+
+        .join span {
+            font-size: 15px;
+            position: absolute;
+            left: 47px;
+            top: 12px;
+            color: rgb(224, 28, 149);
+
+        }
+
+        .footer {
+            background: #dddddd;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            width: 90%;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px rgb(65, 63, 63) solid;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a class="mainLogo" href=""><img src="pics_1129/logo.png" alt=""></a>
+            <nav>
+                <div class="mainNav">
+                    <li><a href="#">找髮型</a></li>
+                    <li><a href="#">找設計師</a></li>
+                    <li><a href="#">美髮誌</a></li>
+                </div>
+                <div class="secNav">
+                    <li><a href="#">註冊</a></li>
+                    <li><a href="#">登入</a></li>
+                </div>
+            </nav>
+            <a class="setting" href=""><img src="pics_1129/setting_h.png" alt=""></a>
+            <ul class="mobile">
+                <a href=""><img class="mobileNav" src="pics_1129/mobile-menu-icon.jpg" alt=""></a>
+                <div class="choose">
+                    <div class="chooseFirst">
+                        <li><a href="#">找髮型</a></li>
+                        <li><a href="#">找設計師</a></li>
+                        <li><a href="#">美髮誌</a></li>
+                    </div>
+                    <div class="chooseSec">
+                        <li><a href="#">註冊</a></li>
+                        <li><a href="#">登入</a></li>
+                        <li><a class="mobileSetting" href=""><img src="pics_1129/setting_h.png" alt=""></a></li>
+                    </div>
+                </div>
+            </ul>
+        </header>
+        <main>
+            <div class="bk"></div>
+            <div class="con1">
+                <div class="logoIcon"></div>
+                <h1>煩惱髮型嗎</h1>
+                <p>給你最多髮型靈感及在地優秀設計師</p>
+                <div class="search">
+                    <div class="selectBox">
+                        <img src="pics_1129/icon_searchbar_location.png" alt="">
+                        <select name="">
+                            <img src="icon_searchbar_location.png" alt="">
+                            <option value="TPE">找地區</option>
+                            <option value="TPE">台北市</option>
+                            <option value="TPH">新北市</option>
+                            <option value="TYC">桃園市</option>
+                            <option value="HSC">新竹市</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="搜尋髮型主題">
+                    <a class="button" href="#">
+                        <img src="pics_1129/icon_searchbar_search.png" alt="">
+                        <span>去逛逛</span>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+        <div class="sec_bg">
+            <div class="sec">
+                <a href="">
+                    <img src="pics_1129/icon_search.png" alt="">
+                    <p>在地設計師作品<br>輕鬆找</p>
+                </a>
+                <a href="">
+                    <img src="pics_1129/icon_fashion.png" alt="">
+                    <p>流行髮型<br>一手掌握</p>
+                </a>
+                <a href="">
+                    <img src="pics_1129/icon_book.png" alt="">
+                    <p>即時溝通預約</p>
+                </a>
+            </div>
+        </div>
+        <article>
+            <div class="title">
+                <h2>熱門主題</h2>
+                <p class="borderLine"></p>
+            </div>
+
+            <div class="sec4">
+                <li>
+                    <img class="img1" src="images/14366_18.jpg" alt="">
+                    <span>型男</span>
+                </li>
+                <li>
+                    <img src="images/22736_8.jpg" alt="">
+                    <span>短髮系</span>
+                </li>
+                <li>
+                    <img class="img3" src="images/138974.jpg" alt="">
+                    <span>大捲髮</span>
+                </li>
+                <li>
+                    <img src="images/3425_14.jpg" alt="">
+                    <span>髮型穿搭</span>
+                </li>
+            </div>
+
+            <p><a href="#">more</a></p>
+            <div class="title">
+                <h2>趨勢話題</h2>
+                <p class="borderLine"></p>
+            </div>
+
+            <div class="sec5">
+                <li>
+                    <img src="images/9344.jpg" alt="">
+                    <p>鬆感劉海!配上極捲的捲度!</p>
+                </li>
+                <li>
+                    <img src="images/141965.jpg" alt="">
+                    <p>日系蓬鬆捲度 吹乾即可 霧面髮色</p>
+                </li>
+                <li>
+                    <img src="images/11155.jpg" alt="">
+                    <p>歐巴新寵，括號流海你跟瘋了嗎?</p>
+                </li>
+            </div>
+            <p><a href="#">more</a></p>
+        </article>
+        <footer>
+            <div class="app">
+                <img class="phone" src="images/phones.png" alt="">
+                <div class="app_contect">
+                    <div class="title">
+                        <h2>快速找到好髮型</h2>
+                        <p class="borderLine"></p>
+                    </div>
+                    <div class="app_store">
+                        <a class="appStore" href="#"><img src="pics_1129/btn_app_ios_h.png" alt=""></a>
+                        <a class="googlePlay" href=""><img src="pics_1129/btn_app_android_h.png" alt=""></a>
+                    </div>
+                    <p>下載並註冊後就可以發表作品囉!</p>
+                </div>
+            </div>
+            <div class="hire">
+
+                <div class="dsign">
+                    <div class="p_635">
+                        <p class="p_first">已有</p>
+                        <p>635</p>
+                        <p>位設計師</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="p_635">
+                        <p class="p_first">發表</p>
+                        <p>6421</p>
+                        <p>張髮型作品</p>
+                    </div>
+                </div>
+                <div class="more">
+                    <span>優秀設計師募集中</span>
+                    <a href=""><span>了解更多</span></a>
+                    <a href=""><span>立即免費註冊</span></a>
+                </div>
+                <div class="blur"></div>
+            </div>
+            <div class="imfo">
+                <div class="logo_imfo">
+                    <img src="images/logo_icon_g.svg" alt="">
+                    <span>HireMap美髮地圖團隊致力於打造出最貼心實用的美髮資訊交流社群，讓美髮時光成為每個人生命中的美好時期．</span>
+                </div>
+                <div class="icon">
+                    <div class="contact">
+                        <a href="" class="miniIcon"><img src="images/email.svg" alt=""><span>聯絡我們</span></a>
+                        <a href="" class="miniIcon"><img src="images/facebook_g.svg" alt=""><span>粉絲專業</span></a>
+                    </div>
+                    <div class="ios">
+                        <a href="" class="miniIcon"><img src="images/ios.svg" alt=""><span>IOS</span></a>
+                        <a href="" class="miniIcon"><img src="images/android.svg" alt=""><span>Android</span></a>
+                    </div>
+                </div>
+                <div class="join">
+                    <a href="">
+                        <img class="join_pic" src="pics_1129/btn_join_h.png" alt="">
+                        <span>設計師加入</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Hairdodo inc.@ 2019. All Rights Reserved <span>使用者條款及隱私</span></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

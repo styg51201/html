@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes walk {
+            0% {
+                object-position: top left;
+            }
+
+            100% {
+                object-position: top right;
+            }
+        }
+
+        div {
+            width: 115px;
+            height: 115px;
+            overflow: hidden;
+        }
+
+        img {
+            animation: walk .8s Infinite;
+            animation-timing-function: steps(5);
+            object-position: top right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./images/未命名-1.png" alt="">
+    </div>
+</body>
+
+</html>

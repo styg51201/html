@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 下面這一行rwd一定要加,不然到手機裡字會縮小 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RWD</title>
+    <style>
+        h1 {
+            color: rgb(138, 24, 24);
+            background: rgb(69, 131, 79);
+            transition: .5s;
+        }
+
+        /* /* 可以有漸變效果,可以有兩個判斷式 */
+        /* 圖片盡量分電腦版跟手機板兩個尺寸的圖片,不然同一張圖用到底,手機板讀取圖片時,就要讀取電腦版的大解析度的圖片然後再縮小,有點浪費資源跟耗費讀取時間 */
+        @media screen and (max-width: 800px) and(min-width:600px) {
+            h1 {
+                color: royalblue;
+                background: silver;
+            }
+        }
+
+        @media screen and (max-width:640px) {
+            h1 {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>this is a title</h1>
+    <picture>
+        <source media="(min-width: 650px)" srcset="../images/dr_fate.jpg">
+        <source media="(min-width: 465px)" srcset="../images/dr_strange.jpg">
+        <img src="../images/deadpool.jpg" alt="Deadpool" style="width:auto;">
+    </picture>
+
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .row {
+            background: lightgreen;
+        }
+
+        .row>div {
+            background: skyblue;
+            border: 1px solid rgb(255, 84, 141);
+        }
+
+        .container_1 {
+            width: 1000px;
+            height: 500px;
+            background: linear-gradient(rgba(255, 255, 255, 0.342), rgba(255, 255, 255, .3)), url(../images/earth.jpg);
+        }
+
+        .container_1:hover {
+            background: linear-gradient(rgba(252, 117, 117, 0.342), rgba(228, 38, 38, 0)), url(../images/earth.jpg), ;
+        }
+
+        .span_1 {
+            display: inline-block;
+            height: 100px;
+            background: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+            <!-- Force next columns to break to new line -->
+            <div class="w-100"></div>
+
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4 .offset-md-4</div>
+            <div class="col offset-5">.col</div>
+            <div class="col">.col</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-5">.col-md-6 .offset-md-3</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                Level 1: .col-sm-9
+                <div class="row">
+                    <div class="col-8 col-sm-6">
+                        Level 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6">
+                        Level 2: .col-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col order-2">
+                First in DOM, no order applied
+            </div>
+            <div class="col order-12">
+                Second in DOM, with a larger order
+            </div>
+            <div class="col order-1">
+                Third in DOM, with an order of 1
+            </div>
+        </div>
+    </div>
+    <pre>123</pre>
+    <p class="lead">
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+    </p>
+
+    <blockquote class="blockquote">
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+
+    <ul class="list-unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+            <ul>
+                <li>Phasellus iaculis neque</li>
+                <li>Purus sodales ultricies</li>
+                <li>Vestibulum laoreet porttitor sem</li>
+                <li>Ac tristique libero volutpat at</li>
+            </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+    </ul>
+
+    <ul class="list-inline">132
+        <li class="list-inline-item">Lorem ipsum</li>
+        <li class="list-inline-item">Phasellus iaculis</li>
+        <li class="list-inline-item">Nulla volutpat</li>
+    </ul>
+
+    <dl class="row">
+        <dt class="col-sm-3" style="background: red;">Description lists</dt>
+        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+        <dt class="col-sm-3">Euismod</dt>
+        <dd class="col-sm-9">
+            <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+            <p>Donec id elit non mi porta gravida at eget metus.</p>
+        </dd>
+
+        <dt class="col-sm-3">Malesuada porta</dt>
+        <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+        <dt class="col-sm-3">Truncated term is truncated</dt>
+        <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+            justo sit amet risus.</dd>
+
+        <dt class="col-sm-3">Nesting</dt>
+        <dd class="col-sm-9">
+            <dl class="row">
+                <dt class="col-sm-6">Nested definition list</dt>
+                <dd class="col-sm-6">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+            </dl>
+        </dd>
+    </dl>
+    <p><kbd>cd</kbd> followed by the name of the directory.<br>
+        To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd></p>
+    <div class="container">
+
+
+        <div class="text-center">
+            <img src="." class="" alt="...">
+        </div>
+    </div>
+    <div class="btn-group justify-content-between">
+
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary
+            link</a>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" checked> Active
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+            </label>
+        </div>
+    </div>
+
+    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group-vertical" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text" id="btnGroupAddon2">@</div>
+            </div>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
+                aria-describedby="btnGroupAddon2">
+        </div>
+    </div>
+    <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+    </div>
+    <div>
+        <div class="btn" type="button" data-toggle="dropdown">
+            menu
+        </div>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="../images/moon.png" class="card-img-left" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of
+                the card's
+                content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+            <a href="#" class="card-link">link</a>
+        </div>
+    </div>
+
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="col-3">1</div>
+            <div class="col-3">2</div>
+            <div class="col-3">3</div>
+        </div>
+
+
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item active">Cras justo odio</li>
+        <li class="list-group-item active">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="nav nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+
+    <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#">Active</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+        <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1"
+            aria-disabled="true">Disabled</a>
+    </nav>
+
+    <nav class="navbar navbar-light bg-light">
+        <form class="form">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="d-flex bd-highlight mb-3 flex-wrap-reverse" style="background: yellow;width: 300px;">
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item1</div>
+        <div class="  p-2 bd-highlight" style="background:rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item</div>
+        <div class="p-2 bd-highlight" style="background: rgb(255, 0, 0);">Flex item3</div>
+    </div>
+    <div class="container_1 align-bottom">
+
+    </div>
+
+    <span class="span_1">baseline</span>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

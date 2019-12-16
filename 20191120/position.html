@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position</title>
+    <style>
+    .box_re{
+        width: 150px;
+        height: 150px;
+        background: lightskyblue;
+        position: relative;
+        left: 500px;
+        top: 50px;
+    }
+    .box_ab{
+        width: 150px; 
+        height: 150px;
+        background: lightyellow;
+        position: relative;
+        right: 30px;
+        
+    }
+    .box_w{
+        width: 500px;
+        height: 300px;
+        border: 2px solid #333;
+        position: relative;
+    }
+    .bag{
+        background:lightpink;
+        width: 30px;
+        height: 50px;
+        position: absolute;
+        right: 30px;
+        top: -20px;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        position: relative;
+        border: 2px solid #ddd;
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin: 10px;
+    }
+
+.line{
+    border: 1px solid #333;
+    margin: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="box_re">re</div>
+
+    <div class="box_ab">ab</div>
+
+    <div class="box_w">
+        <div class="box_ab">ab</div>
+    </div>
+
+    <div class="line"></div>
+
+    <ul>
+        <li>card
+            <div class="bag"></div>
+        </li>
+        <li>card
+                <div class="bag"></div>
+            </li>
+            <li>card
+                    <div class="bag"></div>
+                </li>
+                <li>card
+                        <div class="bag"></div>
+                    </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-image</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background: #dddddd;
+        border: 20px solid transparent;
+        margin: 10px;
+    }
+    .img1{
+        border-image:url(../images/border-image2.png) 20 round;        
+    }
+    .img2{
+        border-image:url(../images/border-image2.png) 20 repeat;        
+    }
+    .img3{
+        border-image:url(../images/border-image2.png) 20 stretch;        
+    }
+    .box2{
+        width: 300px;
+        min-height: 350px;
+        border: 20px solid transparent;
+        border-image:url(../images/frame_border.png) 50 stretch;
+    }
+    img{
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box img1"></div>
+    <div class="box img2"></div>
+    <div class="box img3"></div>
+    <div class="box2">
+        <img src="../images/image.png" alt="">
+    </div>
+
+</body>
+</html>

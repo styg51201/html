@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav</title>
+    <style>
+        body {
+            background: #ddd;
+
+        }
+
+        .wrapper {
+            background-color: #fff;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav>li {
+            float: left;
+            width: 50;
+            font-family: serif;
+            position: relative;
+            transition: .5s;
+        }
+
+        /* 想做下拉式選單由上而下展開,用高度去設,max-hight */
+        .sub {
+            position: absolute;
+            background: red;
+            list-style: none;
+            padding: 0;
+            transition: .5s;
+            max-height: 0;
+
+            overflow: hidden;
+        }
+
+        .sub a {
+            padding: 15px;
+            padding-right: 50px;
+        }
+
+        ul>li:hover .sub {
+            max-height: 200px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 8px 10px;
+            line-height: 30px;
+
+        }
+
+        a:hover {
+            background: lightseagreen;
+
+        }
+
+        .clearfix::after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="clearfix nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Store</a>
+                    <ul class="sub">
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</body>
+
+</html>

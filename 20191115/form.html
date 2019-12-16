@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <style>
+    .form-row{
+        border-bottom:1px solid #5eabd8 ;
+        padding: 10px;
+        width: 50%;
+    }
+    .title{
+        float: left;
+        width: 69px;
+        text-align: right;
+        padding-right:8px ;
+    }
+    .submit{
+        text-align: right;
+    }
+
+    </style>
+</head>
+<body>
+    <form action="recevie.php" method="POST" enctype='multipart/form-data'>
+        <fieldset class="" >
+            <legend>個人資料</legend>
+    <div class='form-row'>
+        <label for="name" class='title'>姓名:</label>
+        <input type="text" id='name' neme='name' placeholder="請輸入姓名">
+    </div>
+    <div class='form-row'>
+        <label for="email" class='title'>Email:</label>
+        <input type="email" id='email' name='email' placeholder="請輸入Email"> 
+    </div>
+    <div class='form-row'>
+            <label for="password" class='title'>密碼:</label>
+            <input type="password" id='password' name='password' placeholder="請輸入密碼"> 
+        </div>
+        <div class="form-row">
+            <label for="note" class='title'>備註:</label>
+            <textarea name="note" id="note" cols="25" rows="5" placeholder="請輸入備註"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="" class='title'>性別:</label>
+                <input type="radio" name="gender" value="male">男
+                <input type="radio" name="gender" value="female">女
+        </div>
+        <div class="form-row">
+            <label for="" class='title'>興趣:</label>
+                <input type="checkbox" name="hobby" value="music">音樂
+                <input type="checkbox" name="hobby" value="sport">運動
+                <input type="checkbox" name="hobby" value="reading">閱讀
+                <input type="checkbox" name="hobby" value="movie">電影
+                
+        </div>
+        <div class="form-row">
+            <label for="place" class='title'>地點:</label>
+                <select name="palce" id='place'>
+                        <option value="TPE">台北市</option>
+                        <option value="TPH">新北市</option>
+                        <option value="TYC">桃園市</option>
+                        <option value="HSC">新竹市</option>
+                    </select>
+                    
+                </div>
+        <div class="form-row">
+            <label for="" class="title">檔案:</label>
+            <input type='file' value='file' multiple>
+        </div>
+   
+    <div class="form-row">
+        <input type="submit" value='送出' class='submit'>
+        <input type="reset" value='清除'class='submit'>
+    </div>
+    <div class="form-row">
+    <label class="title">特殊字元:</label>
+    &copy &#8482 &reg &
+</div>
+</fieldset>
+</form>
+
+</body>
+</html>

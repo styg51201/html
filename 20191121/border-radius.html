@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-radius</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background: lightcoral;
+        margin: 10px;
+        float: left;
+    }   
+    .cir1{
+       border-radius: 20px;
+       border: 1px solid #333;
+    }
+    .cir2{
+        border-radius: 30%;
+    }
+    .cir3{
+        border-radius:100% 0;
+    } 
+    .cir4{
+        border-radius: 50%;
+    }  
+    .cir5{
+        border-radius: 30px/100px;
+    }
+    .pic2{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow:hidden;
+    }
+    .pic2 img{
+        width: 100%;
+    }
+    .pic1 img{
+       width: 100%;
+
+    }
+    .pic1{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box cir1"></div>
+    <div class="box cir2"></div>
+    <div class="box cir3"></div>
+    <div class="box cir4"></div>
+    <div class="box cir5"></div>
+    <figure class="pic2"><img src="../images/dr_strange.jpg" alt=""></figure>
+    <figure class="pic1"><img src="../images/image.png" alt=""></figure>
+
+    
+</body>
+</html>

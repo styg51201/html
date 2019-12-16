@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>color</title>
+    <style>
+    
+    .wrapper{
+        position: relative;
+        width: 500px;
+    }
+    .map{
+        width: 500px;
+        height: 300px;
+        background: url(../images/map.png);
+        background-size: cover;
+        opacity: .2;
+        transition: .5s;
+    }
+    h1{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background:rgba(0,0,0,.2);
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        transition: .5s;
+        opacity: 1;
+    }
+    .wrapper:hover .map{
+        opacity: 1;
+        transition: .5s;
+    }
+    .wrapper:hover h1{
+        opacity: .8;
+        text-align: left;
+        /* transform: translateX(100px); */
+    }
+    .pic_wrapper{
+        background: url(../images/slide1.jpeg);
+        width: 500px;
+        height: 300px;
+        background-size: cover;
+        position: relative;
+    }
+    .pic_wrapper:hover .black{
+        background:black;
+        width: 500px;
+        height: 300px;
+        opacity: .4;
+    }
+    h2{
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        opacity: .3;
+    }
+    .pic_wrapper:hover h2{
+        opacity: 1;
+    }
+
+    </style>
+</head>
+<body>
+   <div class="wrapper">
+        <div class="map">
+        </div>
+        <h1>
+            USA
+        </h1>
+   </div>
+   <div class="pic_wrapper">
+       <div class="black">  
+       </div>
+       <h2>高雄</h2>
+   </div>
+
+</body>
+</html>

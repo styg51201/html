@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout</title>
+    <style>
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-areas: 'header header header header'
+                'nav nav nav nav'
+                'main main main aside'
+                'footer footer footer footer';
+
+        }
+
+        header {
+            background: lightblue;
+            grid-area: header;
+            text-align: center;
+
+        }
+
+        header img {
+            max-width: 60%;
+            height: 200px;
+            object-fit: contain;
+
+        }
+
+        nav {
+            background: lightcoral;
+            grid-area: nav;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        li:hover {
+            background: rgb(247, 152, 152);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 15px 30px;
+        }
+
+        main {
+            background: lightgoldenrodyellow;
+            grid-area: main;
+        }
+
+        main img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        aside {
+            background: lightgreen;
+            grid-area: aside;
+        }
+
+        aside .pc {
+            display: flex;
+            flex-direction: column;
+        }
+
+        aside .mobile {
+            display: none;
+        }
+
+        footer {
+            background: lightskyblue;
+            grid-area: footer;
+            text-align: center;
+        }
+
+        @media screen and (max-width:576px) {
+            .wrapper {
+                grid-template-areas: 'header header header header'
+                    'nav nav nav aside'
+                    'main main main main'
+                    'footer footer footer footer';
+            }
+
+            aside .pc {
+                display: none;
+            }
+
+            aside .mobile {
+                display: block;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header><img src="../images/powerless.png" alt="">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">關於</a></li>
+                <li><a href="#">聯絡資訊</a></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>下面是地圖</h2>
+            <img src="../images/map.png" alt="">
+            <p>上面是美國的地圖</p>
+        </main>
+        <aside>
+            <ul class="mobile">
+                <li><a href="">手連</a></li>
+            </ul>
+            <ul class="pc">
+                <li><a href="">連結</a></li>
+                <li><a href="">連結</a></li>
+                <li><a href="">連結</a></li>
+                <li><a href="">連結</a></li>
+                <li><a href="">連結</a></li>
+                <li><a href="">連結</a></li>
+            </ul>
+
+        </aside>
+        <footer>小貓網站</footer>
+    </div>
+</body>
+
+</html>
